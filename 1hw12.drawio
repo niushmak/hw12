@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Hiring Activity Diagram" id="hiringDiagram">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Swimlanes -->
+        <mxCell id="deptManager" value="Department Manager" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="hrDept" value="HR Department" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="200" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="candidate" value="Candidate" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="400" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="hrManager" value="HR Manager" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="600" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="itDept" value="IT Department" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="800" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+        <mxCell id="system" value="System" style="swimlane" vertex="1" parent="1">
+          <mxGeometry x="1000" y="0" width="200" height="800" as="geometry"/>
+        </mxCell>
+
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="ellipse;fillColor=#00FF00" vertex="1" parent="deptManager">
+          <mxGeometry x="60" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Actions -->
+        <mxCell id="vacancyReq" value="Create Vacancy Request" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="deptManager">
+          <mxGeometry x="40" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="hrApproval" value="HR Approval" style="rhombus;fillColor=#FFFF99" vertex="1" parent="hrDept">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Approved/Rejected -->
+        <mxCell id="vacancyRejected" value="Vacancy Rejected" style="rounded=1;fillColor=#FFCCCC" vertex="1" parent="hrDept">
+          <mxGeometry x="40" y="220" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="publishVacancy" value="Publish Vacancy" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="hrDept">
+          <mxGeometry x="40" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Parallel: Candidates Applying -->
+        <mxCell id="apply" value="Candidates Apply" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="candidate">
+          <mxGeometry x="40" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="screening" value="Screen Candidates" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="hrManager">
+          <mxGeometry x="40" y="380" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="decisionSuitable" value="Suitable?" style="rhombus;fillColor=#FFFF99" vertex="1" parent="hrManager">
+          <mxGeometry x="40" y="460" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="interview" value="Interview" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="hrManager">
+          <mxGeometry x="40" y="540" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="interviewDecision" value="Interview Passed?" style="rhombus;fillColor=#FFFF99" vertex="1" parent="hrManager">
+          <mxGeometry x="40" y="620" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="offer" value="Offer" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="hrManager">
+          <mxGeometry x="40" y="700" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="offerDecision" value="Offer Confirmed?" style="rhombus;fillColor=#FFFF99" vertex="1" parent="candidate">
+          <mxGeometry x="40" y="700" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="addEmployee" value="Add Employee to System" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="system">
+          <mxGeometry x="40" y="780" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="prepareWorkplace" value="Prepare Workplace" style="rounded=1;fillColor=#FFFFFF" vertex="1" parent="itDept">
+          <mxGeometry x="40" y="780" width="140" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- End -->
+        <mxCell id="end" value="End" style="ellipse;fillColor=#FF0000" vertex="1" parent="system">
+          <mxGeometry x="60" y="860" width="80" height="40" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
